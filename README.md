@@ -4,7 +4,7 @@
 
 This is a web app that I built to see if it was _actually_ possible to create an application that runs at 60fps on modern smartphones. For the most part it was successful. If you're interested, [there's a blog post](http://aerotwist.com/blog/making-a-60fps-mobile-app/) you can read.
 
-**Note: the source code is not heavily commented as yet. As I have time I will try to put some time into doing that. Hopefully it will be readable as-is**
+**Note: the source code is not heavily commented as yet. As I have time I will try to put some time into doing that. Hopefully it will be readable as-is, but I apologise if you run into readability issues!**
 
 If you're interested in dissecting the app start with `/src/misc/bootstrap.js` and `/src/app.js`. The `<canvas>` based components are found in `/src/view/ticker.js` and `/src/view/dial.js`.
 
