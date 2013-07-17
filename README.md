@@ -1,4 +1,6 @@
-# Weight Tracker
+# Weight Tracker - A 60fps Mobile Web App
+
+## http://weight.aerotwist.com
 
 ![image](http://aerotwist.com/blog/making-a-60fps-mobile-app/images/screens.jpg)
 
