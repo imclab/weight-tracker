@@ -1,6 +1,8 @@
 /**
  * You're going to need to do `npm install uglify-js` first in order to use
  * this script.
+ *
+ * @license see /LICENSE
  */
 var UglifyJS = require("uglify-js");
 var FS = require('fs');
