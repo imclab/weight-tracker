@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<title>Weight Tracker</title>
+
+	<link rel="stylesheet" href="css/weight.css">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+</head>
+<body class="loading">
+
+  <section class="wrapper">
+    <section id="intro-view" class="view">
+      <div class="card">
+        <h1>Hello!</h1>
+        <p>To begin with I need to ask you a few questions</p>
+        <a class="next" href="#">OK</a>
+      </div>
+
+      <div class="card">
+        <h1>Height</h1>
+        <p>Do you prefer your height to be in metres or inches?</p>
+        <div data-target="settings.unitsHeight" class="options">
+          <a data-value="metres" class="selected" href="#">Metres</a>
+          <a data-value="inches" href="#">Inches</a>
+        </div>
+        <a class="next" href="#">Next</a>
+      </div>
+
+      <div class="card white">
+        <h1 class="small">Set your height</h1>
+        <canvas data-type="dial" data-max="2.5" data-color="BLUE" data-track-color="false" data-label="height" data-decimal-places="2" data-ratio="0.4" data-event-complete="heightreadingcomplete" id="currentheight"></canvas>
+        <a class="next" href="#">Next</a>
+      </div>
+
+      <div class="card">
+        <h1>Weight</h1>
+        <p>Do you prefer your weight to be in kilograms or pounds?</p>
+        <div data-target="settings.unitsWeight" class="options">
+          <a data-value="kilograms" class="selected" href="#">Kilos</a>
+          <a data-value="pounds" href="#">Pounds</a>
+        </div>
+        <a class="next" href="#">Next</a>
+      </div>
+
+      <div class="card white">
+        <h1 class="small">Set your weight</h1>
+        <canvas data-type="dial" data-max="140" data-color="BLUE" data-track-color="true" data-label="weight" data-decimal-places="1" data-ratio="5" data-event-complete="weightreadingcomplete" id="currentweight"></canvas>
+        <a class="next" href="#">Next</a>
+      </div>
+
+      <div class="card">
+        <h1>Done!</h1>
+        <p>Thanks. Don't forget that you can change your settings at
+          any time, and you can also set a weight goal.</p>
+        <a class="next" href="#">OK</a>
+      </div>
+    </section>
+
+    <section id="main-view" class="view">
+
+      <header>
+        <a id="settings" href="#">Settings</a>
+      </header>
+      <canvas id="weightticker"></canvas>
+
+      <footer>
+        <a href="#" id="setgoal" class="message">Would you like to set a goal?</a>
+        <div class="darkblock"></div>
+      </footer>
+    </section>
+
+    <section id="weight-entry-view" class="view">
+      <a class="removegoal" href="#">Remove Goal</a>
+      <canvas id="newweight"></canvas>
+      <a class="next" href="#">OK</a>
+    </section>
+
+    <section id="settings-view" class="view">
+      <div class="inner">
+        <div id="back-bar">
+          <a href="#">Close</a>
+        </div>
+
+        <section>
+          <div class="setting">
+            <h2>Height</h2>
+            <div data-target="settings.unitsHeight" class="options">
+              <a data-value="metres" href="#">Metres</a>
+              <a data-value="inches" href="#">Inches</a>
+            </div>
+          </div>
+
+          <div class="setting">
+            <h2>Weight</h2>
+            <div data-target="settings.unitsWeight" class="options">
+              <a data-value="kilograms" href="#">Kilos</a>
+              <a data-value="pounds" href="#">Pounds</a>
+            </div>
+          </div>
+
+          <div class="setting">
+            <a id="changeheight" href="#">Change your height</a>
+          </div>
+
+          <div class="setting">
+            <a id="resetall" href="#">Reset all data</a>
+          </div>
+
+        </section>
+
+        <section id="height-entry-view" class="view">
+          <canvas id="newheight"></canvas>
+          <a class="next" href="#">OK</a>
+        </section>
+
+      </div>
+    </section>
+
+    <section id="message-view" class="view">
+
+    </section>
+
+  </section>
+
+  <!-- START MINIFY -->
+  <script src="libs/raf.js"></script>
+  <script src="libs/tween.js"></script>
+
+  <script src="scripts/misc/namespace.js"></script>
+  <script src="scripts/misc/colors.js"></script>
+  <script src="scripts/misc/namespace.js"></script>
+
+  <script src="scripts/model/base.js"></script>
+  <script src="scripts/model/settings.js"></script>
+  <script src="scripts/model/user.js"></script>
+
+  <script src="scripts/view/base.js"></script>
+  <script src="scripts/view/intro.js"></script>
+  <script src="scripts/view/dial.js"></script>
+  <script src="scripts/view/dialentry.js"></script>
+  <script src="scripts/view/main.js"></script>
+  <script src="scripts/view/ticker.js"></script>
+  <script src="scripts/view/weightentry.js"></script>
+  <script src="scripts/view/heightentry.js"></script>
+  <script src="scripts/view/settings.js"></script>
+  <script src="scripts/view/message.js"></script>
+
+  <script src="scripts/app.js"></script>
+
+  <script src="scripts/controller/base.js"></script>
+  <script src="scripts/controller/intro.js"></script>
+  <script src="scripts/controller/main.js"></script>
+  <script src="scripts/controller/weightentry.js"></script>
+  <script src="scripts/controller/settings.js"></script>
+  <script src="scripts/controller/message.js"></script>
+
+  <script src="scripts/misc/bootstrap.js"></script>
+
+  <!-- END MINIFY -->
+
+  <!--
+    <script src="libs/wt.min.js"></script>
+  -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+CACHE MANIFEST
+# 2013-06-20:v24
+
+# Explicitly cached entries
+index.html
+css/fonts.css
+css/weight.css
+fonts/Roboto-Bold.ttf
+fonts/Roboto-Regular.ttf
+fonts/Roboto-Thin.ttf
+images/loader.gif
+images/please-rotate.gif
+images/back-arrow.png
+images/settings-button.png
+libs/webfont.js
+libs/wt.min.js
+favicon.png
+
+# All other resources (e.g. sites) require the user to be online.
+NETWORK:
+*
